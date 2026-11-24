@@ -1,0 +1,9 @@
+project: savantenvs/OpenGothic
+target: fuzz_bink
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bink/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bink
+    libfuzzer: true
+    timeout: 10

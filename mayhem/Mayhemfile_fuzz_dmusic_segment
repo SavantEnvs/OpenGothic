@@ -1,0 +1,9 @@
+project: savantenvs/OpenGothic
+target: fuzz_dmusic_segment
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dmusic_segment/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dmusic_segment
+    libfuzzer: true
+    timeout: 10

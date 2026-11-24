@@ -1,0 +1,9 @@
+project: savantenvs/OpenGothic
+target: fuzz_dx8_dls
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dx8_dls/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dx8_dls
+    libfuzzer: true
+    timeout: 10
